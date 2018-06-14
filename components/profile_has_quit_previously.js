@@ -9,10 +9,7 @@ exports.getComponent = () => {
     description: 'Packet to forward'
   });
   c.outPorts.add('out', {
-    datatype: 'yes'
-  });
-  c.outPorts.add('out', {
-    datatype: 'no'
+    datatype: 'string'
   });
   c.process((input, output) => {
     // Check preconditions on input data

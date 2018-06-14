@@ -9,12 +9,9 @@ exports.getComponent = () => {
     description: 'Packet to forward'
   });
   c.outPorts.add('out', {
-    datatype: 'male'
+    datatype: 'string'
   });
-  c.outPorts.add('out', {
-    datatype: 'female'
-  });
-  
+
   c.process((input, output) => {
     // Check preconditions on input data
     if (!input.hasData('in')) {
