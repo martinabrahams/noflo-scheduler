@@ -1,0 +1,15 @@
+{
+  "id": "203e6ad3-232a-4a91-80af-00d9a94b649a",
+  "label": "noflo-chatbot NoFlo runtime",
+  "secret": "some-password",
+  "permissions": {
+    "some-password": [
+      "protocol:component",
+      "protocol:runtime",
+      "protocol:graph",
+      "protocol:network",
+      "component:getsource",
+      "component:setsource"
+    ]
+  }
+}
