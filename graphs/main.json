@@ -9,6 +9,17 @@
     "inports": {},
     "outports": {},
     "groups": [],
-    "processes": {},
+    "processes": {
+        "chatbot/profile_has_quit_previously_uz3lk": {
+            "component": "chatbot/profile_has_quit_previously",
+            "metadata": {
+                "label": "profile_has_quit_previously",
+                "x": 576,
+                "y": 396,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
     "connections": []
 }
