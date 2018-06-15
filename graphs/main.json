@@ -6,14 +6,20 @@
             "type": "noflo-nodejs"
         }
     },
-    "inports": {},
+    "inports": {
+        "in" : {
+            "datatype": "string",
+            "description": "Bogus string content to kick it off",
+            "required": true
+        }
+    },
     "outports": {},
     "groups": [],
     "processes": {
         "a0658bdc-f834-4eb7-9670-7fe9c393a0fe/Main_Get_Contactable_Profiles_w77kn": {
-            "component": "a0658bdc-f834-4eb7-9670-7fe9c393a0fe/Main_Get_Contactable_Profiles",
+            "component": "scheduler/main_get_profiles",
             "metadata": {
-                "label": "Main_Get_Contactable_Profiles",
+                "label": "Get Contactable Profiles",
                 "x": 648,
                 "y": 396,
                 "width": 72,
@@ -21,9 +27,9 @@
             }
         },
         "scheduler/Determine Content_rn787": {
-            "component": "scheduler/Determine Content",
+            "component": "scheduler/determine_content",
             "metadata": {
-                "label": "Determine Content",
+                "label": "Determine User Content",
                 "x": 864,
                 "y": 396,
                 "width": 72,

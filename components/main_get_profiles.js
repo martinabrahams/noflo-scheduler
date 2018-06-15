@@ -1,6 +1,7 @@
 const noflo = require('noflo');
 
 exports.getComponent = () => {
+    console.log('init main_get_profiles');
   const c = new noflo.Component();
   c.description = '';
   c.icon = 'hand-peace-o';
@@ -12,6 +13,9 @@ exports.getComponent = () => {
     datatype: 'array'
   });
   c.process((input, output) => {
+
+    console.log('processing main_get_profiles');
+
     // Check preconditions on input data
     //if (!input.hasData('in')) {
     //  return;
