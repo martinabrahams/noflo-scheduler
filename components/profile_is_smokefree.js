@@ -2,7 +2,7 @@ const noflo = require('noflo');
 
 exports.getComponent = () => {
   const c = new noflo.Component();
-  c.description = 'profile user has quit';
+  c.description = 'profile user is smoke free';
   c.icon = 'user-o';
   c.inPorts.add('profile', {
     datatype: 'object',
@@ -26,7 +26,7 @@ exports.getComponent = () => {
     // Read packets we need to process
     const profileData = input.getData('profile');
     
-    if (profileData && profileData.hasquit) {
+    if (profileData && profileData.is_smokefree) {
        // Process data and send output
       output.send({
         yes: profileData
