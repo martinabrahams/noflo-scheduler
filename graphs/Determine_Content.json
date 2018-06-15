@@ -8,7 +8,13 @@
             "type": "noflo-nodejs"
         }
     },
-    "inports": {},
+    "inports": {
+        "profile" : {
+            "datatype": "object",
+            "description": "Profile to run against",
+            "required": true
+        }
+    },
     "outports": {},
     "groups": [],
     "processes": {
