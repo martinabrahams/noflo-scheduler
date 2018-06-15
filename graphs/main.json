@@ -10,38 +10,26 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "scheduler/profile_gender_eofav": {
-            "component": "scheduler/profile_gender",
+        "a0658bdc-f834-4eb7-9670-7fe9c393a0fe/Main_Get_Contactable_Profiles_w77kn": {
+            "component": "a0658bdc-f834-4eb7-9670-7fe9c393a0fe/Main_Get_Contactable_Profiles",
             "metadata": {
-                "label": "profile_gender",
+                "label": "Main_Get_Contactable_Profiles",
                 "x": 648,
-                "y": 360,
+                "y": 396,
                 "width": 72,
                 "height": 72
             }
         },
-        "scheduler/profile_gender_692k6": {
-            "component": "scheduler/profile_gender",
+        "scheduler/Determine Content_rn787": {
+            "component": "scheduler/Determine Content",
             "metadata": {
-                "label": "profile_gender",
-                "x": 828,
-                "y": 432,
+                "label": "Determine Content",
+                "x": 864,
+                "y": 396,
                 "width": 72,
                 "height": 72
             }
         }
     },
-    "connections": [
-        {
-            "src": {
-                "process": "scheduler/profile_gender_eofav",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "scheduler/profile_gender_692k6",
-                "port": "in"
-            },
-            "metadata": {}
-        }
-    ]
+    "connections": []
 }
