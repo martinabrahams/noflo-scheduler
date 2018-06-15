@@ -10,16 +10,38 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "chatbot/profile_has_quit_previously_uz3lk": {
-            "component": "chatbot/profile_has_quit_previously",
+        "scheduler/profile_gender_eofav": {
+            "component": "scheduler/profile_gender",
             "metadata": {
-                "label": "profile_has_quit_previously",
-                "x": 576,
-                "y": 396,
+                "label": "profile_gender",
+                "x": 648,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "scheduler/profile_gender_692k6": {
+            "component": "scheduler/profile_gender",
+            "metadata": {
+                "label": "profile_gender",
+                "x": 828,
+                "y": 432,
                 "width": 72,
                 "height": 72
             }
         }
     },
-    "connections": []
+    "connections": [
+        {
+            "src": {
+                "process": "scheduler/profile_gender_eofav",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "scheduler/profile_gender_692k6",
+                "port": "in"
+            },
+            "metadata": {}
+        }
+    ]
 }

@@ -2,26 +2,43 @@ const noflo = require('noflo');
 
 exports.getComponent = () => {
   const c = new noflo.Component();
-  c.description = '';
-  c.icon = 'bomb';
+  c.description = 'profile user has quit';
+  c.icon = 'user-o';
   c.inPorts.add('in', {
-    datatype: 'all',
-    description: 'Packet to forward'
+    datatype: 'object',
+    description: 'User profile'
   });
-  c.outPorts.add('out', {
-    datatype: 'string'
+  
+  c.outPorts.add('yes', {
+    datatype: 'object',
+    description: 'User profile'
   });
+  c.outPorts.add('no', {
+    datatype: 'object',
+    description: 'User profile'
+  });
+
   c.process((input, output) => {
     // Check preconditions on input data
     if (!input.hasData('in')) {
       return;
     }
     // Read packets we need to process
-    const data = input.getData('in');
-    // Process data and send output
-    output.send({
-      out: data
-    });
+    const profileData = input.getData('in');
+    
+    if (profileData && profileData.hasquit) {
+       // Process data and send output
+      output.send({
+        yes: profileData
+      });
+    }
+    else {
+       // Process data and send output
+      output.send({
+        no: profileData
+      });
+    }
+       
     // Deactivate
     output.done();
   });
