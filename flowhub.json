@@ -11,5 +11,6 @@
       "component:getsource",
       "component:setsource"
     ]
-  }
+  },
+  "trace": true
 }

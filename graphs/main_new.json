@@ -5,7 +5,7 @@
         "description": "Main entry point",
         "icon": "bed",
         "environment": {
-            "type": "all"
+            "type": "noflo-nodejs"
         }
     },
     "inports": {

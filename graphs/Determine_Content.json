@@ -5,8 +5,8 @@
         "description": "Decision tree for broadcast",
         "icon": "cogs",
         "environment": {
-            "type": "all"
-        }
+            "type": "noflo-nodejs"
+        } 
     },
     "inports": {
         "profile": {

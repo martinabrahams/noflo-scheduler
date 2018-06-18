@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node node_modules/.bin/noflo-nodejs"
+    "start": "node node_modules/.bin/noflo-nodejs --graph graphs/main_new.json --trace"
   },
   "author": "",
   "license": "ISC",
