@@ -1,7 +1,7 @@
 {
     "caseSensitive": false,
     "properties": {
-        "name": "Determine Content",
+        "name": "Determine_Content",
         "description": "Decision tree for broadcast",
         "icon": "cogs",
         "environment": {
@@ -14,8 +14,8 @@
             "port": "profile",
             "metadata": {
                 "label": "Profile obj",
-                "x": 20,
-                "y": 20,
+                "x": 288,
+                "y": 108,
                 "width": 72,
                 "height": 72
             }
