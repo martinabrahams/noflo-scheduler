@@ -12,10 +12,10 @@
             "port": "in",
             "metadata": {
                 "label": "Blah",
-                "x": 638,
-                "y": 393,
-                "width": 2,
-                "height": 2
+                "x": 28,
+                "y": 28,
+                "width": 72,
+                "height": 72
             }
         }
     },
