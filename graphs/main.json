@@ -1,14 +1,25 @@
 {
     "caseSensitive": false,
     "properties": {
-        "name": "main_new",
+        "name": "main",
         "description": "Main entry point",
         "icon": "bed",
         "environment": {
             "type": "all"
         }
     },
-    "inports": {},
+    "inports": {
+        "in": {
+            "process": "scheduler/main_get_profiles_o6osj",
+            "port": "in",
+            "metadata": {
+                "x": 360,
+                "y": 324,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
     "outports": {},
     "groups": [
         {
@@ -43,16 +54,6 @@
                 "height": 72
             }
         },
-        "scheduler/main_get_profiles_56oh6": {
-            "component": "scheduler/main_get_profiles",
-            "metadata": {
-                "label": "main_get_profiles",
-                "x": 504,
-                "y": 324,
-                "width": 72,
-                "height": 72
-            }
-        },
         "scheduler/Content_AddToQueue_simjn": {
             "component": "scheduler/Content_AddToQueue",
             "metadata": {
@@ -62,12 +63,52 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "scheduler/main_get_profiles_o6osj": {
+            "component": "scheduler/main_get_profiles",
+            "metadata": {
+                "label": "main_get_profiles",
+                "x": 504,
+                "y": 324,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
         {
             "src": {
-                "process": "scheduler/main_get_profiles_56oh6",
+                "process": "objects/SplitArray_kbl42",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "scheduler/Determine_Content_7t52c",
+                "port": "profile"
+            }
+        },
+        {
+            "src": {
+                "process": "scheduler/Determine_Content_7t52c",
+                "port": "profile"
+            },
+            "tgt": {
+                "process": "scheduler/Content_AddToQueue_simjn",
+                "port": "profile"
+            }
+        },
+        {
+            "src": {
+                "process": "scheduler/Determine_Content_7t52c",
+                "port": "content"
+            },
+            "tgt": {
+                "process": "scheduler/Content_AddToQueue_simjn",
+                "port": "content"
+            }
+        },
+        {
+            "src": {
+                "process": "scheduler/main_get_profiles_o6osj",
                 "port": "userprofiles"
             },
             "tgt": {
@@ -77,42 +118,9 @@
             "metadata": {}
         },
         {
-            "src": {
-                "process": "objects/SplitArray_kbl42",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "scheduler/Determine_Content_7t52c",
-                "port": "profile"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "scheduler/Determine_Content_7t52c",
-                "port": "profile"
-            },
-            "tgt": {
-                "process": "scheduler/Content_AddToQueue_simjn",
-                "port": "profile"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "scheduler/Determine_Content_7t52c",
-                "port": "content"
-            },
-            "tgt": {
-                "process": "scheduler/Content_AddToQueue_simjn",
-                "port": "content"
-            },
-            "metadata": {}
-        },
-        {
             "data": "true",
             "tgt": {
-                "process": "scheduler/main_get_profiles_56oh6",
+                "process": "scheduler/main_get_profiles_o6osj",
                 "port": "in"
             }
         }
