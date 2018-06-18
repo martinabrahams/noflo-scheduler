@@ -49,8 +49,8 @@
             "component": "scheduler/profile_has_recent_sos",
             "metadata": {
                 "label": "profile_has_recent_sos",
-                "x": 756,
-                "y": 144,
+                "x": 828,
+                "y": 36,
                 "width": 72,
                 "height": 72
             }
@@ -211,6 +211,17 @@
             "tgt": {
                 "process": "scheduler/cotent_getblock_4y5i2",
                 "port": "content"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "scheduler/profile_is_smokefree_9hxd7",
+                "port": "no"
+            },
+            "tgt": {
+                "process": "scheduler/profile_gender_3lczm",
+                "port": "profile"
             },
             "metadata": {}
         }
