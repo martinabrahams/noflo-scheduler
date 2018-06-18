@@ -20,26 +20,26 @@
             }
         }
     },
-    "outports": {
-        "content": {
-            "process": "scheduler/Determine_Content_7t52c",
-            "port": "content",
+    "outports": {},
+    "groups": [
+        {
+            "name": "Single Profile",
+            "nodes": [
+                "scheduler/Content_AddToQueue_simjn",
+                "scheduler/Determine_Content_7t52c"
+            ],
             "metadata": {
-                "x": 1044,
-                "y": 360,
-                "width": 72,
-                "height": 72
+                "description": "Process for single profile"
             }
         }
-    },
-    "groups": [],
+    ],
     "processes": {
         "scheduler/Determine_Content_7t52c": {
             "component": "scheduler/Determine_Content",
             "metadata": {
                 "label": "Determine_Content",
                 "x": 864,
-                "y": 360,
+                "y": 468,
                 "width": 72,
                 "height": 72
             }
@@ -49,7 +49,7 @@
             "metadata": {
                 "label": "SplitArray",
                 "x": 684,
-                "y": 360,
+                "y": 324,
                 "width": 72,
                 "height": 72
             }
@@ -60,6 +60,16 @@
                 "label": "main_get_profiles",
                 "x": 504,
                 "y": 324,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "scheduler/Content_AddToQueue_simjn": {
+            "component": "scheduler/Content_AddToQueue",
+            "metadata": {
+                "label": "Content_AddToQueue",
+                "x": 1080,
+                "y": 468,
                 "width": 72,
                 "height": 72
             }
@@ -85,6 +95,28 @@
             "tgt": {
                 "process": "scheduler/Determine_Content_7t52c",
                 "port": "profile"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "scheduler/Determine_Content_7t52c",
+                "port": "profile"
+            },
+            "tgt": {
+                "process": "scheduler/Content_AddToQueue_simjn",
+                "port": "profile"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "scheduler/Determine_Content_7t52c",
+                "port": "content"
+            },
+            "tgt": {
+                "process": "scheduler/Content_AddToQueue_simjn",
+                "port": "content"
             },
             "metadata": {}
         }

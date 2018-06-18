@@ -2,57 +2,42 @@ const noflo = require('noflo');
 
 exports.getComponent = () => {
   const c = new noflo.Component();
-  c.description = 'take content and return it as block';
+  c.description = 'Add post to broadcast queue.';
   c.icon = 'user-o';
-
-  c.inPorts.add('profile', {
-    datatype: 'object',
-    description: 'User profile object'
-  });
-
   
-  c.inPorts.add('content', {
-    datatype: 'object',
-    description: 'User profile object'
-  });
-
-
-  c.outPorts.add('profile', {
+  c.inPorts.add('profile', {
     datatype: 'object',
     description: 'User profile'
   });
-
   
-  c.outPorts.add('content', {
+  c.inPorts.add('content', {
     datatype: 'object',
-    description: 'Content'
+    description: 'User profile'
+  });
+  
+  c.outPorts.add('success', {
+    datatype: 'object',
+    description: 'Was it added'
   });
 
-  
   c.process((input, output) => {
-
-    console.log('init getcontent');
-
     // Check preconditions on input data
-    if (!input.hasData('content')) {
-      return;
-    }
-    
     if (!input.hasData('profile')) {
       return;
     }
     
-    var profile = input.getData('profile');
-    
     // Read packets we need to process
-    const content = input.getData('content');
+    const profileData = input.getData('profile');
+    const contentData = input.getData('content');
 
-    // Process data and send output
+    // scheduling content
+    console.log('scheduling', profileData, contentData);
+    
     output.send({
-      profile: profile,
-      content: content
+      success: true
     });
-  
+
+       
     // Deactivate
     output.done();
   });

@@ -10,6 +10,11 @@ exports.getComponent = () => {
     description: 'User profile'
   });
   
+  c.outPorts.add('profile', {
+    datatype: 'object',
+    description: 'Profile'
+  });
+  
   c.outPorts.add('content', {
     datatype: 'object',
     description: 'Content'
@@ -20,6 +25,8 @@ exports.getComponent = () => {
     if (!input.hasData('profile')) {
       return;
     }
+    
+    var profile = input.getData('profile');
 
     var content = {
         blockName: "block_smokefree",
@@ -27,6 +34,7 @@ exports.getComponent = () => {
     };
 
     output.send({
+      	profile: profile,
         content: content
     });
 

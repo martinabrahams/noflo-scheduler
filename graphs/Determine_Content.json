@@ -27,7 +27,17 @@
             "port": "content",
             "metadata": {
                 "x": 1692,
-                "y": 216,
+                "y": 288,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "profile": {
+            "process": "scheduler/cotent_getblock_4y5i2",
+            "port": "profile",
+            "metadata": {
+                "x": 1692,
+                "y": 108,
                 "width": 72,
                 "height": 72
             }
@@ -115,6 +125,9 @@
             "tgt": {
                 "process": "scheduler/profile_has_recent_sos_1fgk8",
                 "port": "profile"
+            },
+            "metadata": {
+                "route": 3
             }
         },
         {
@@ -125,6 +138,9 @@
             "tgt": {
                 "process": "scheduler/content_is_smoke_free_p0dws",
                 "port": "profile"
+            },
+            "metadata": {
+                "route": 3
             }
         },
         {
@@ -135,6 +151,9 @@
             "tgt": {
                 "process": "scheduler/profile_gender_3lczm",
                 "port": "profile"
+            },
+            "metadata": {
+                "route": 3
             }
         },
         {
@@ -146,7 +165,9 @@
                 "process": "scheduler/content_is_smoke_free_4h9zo",
                 "port": "profile"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 3
+            }
         },
         {
             "src": {
@@ -157,7 +178,9 @@
                 "process": "scheduler/content_is_smoke_free_4h9zo",
                 "port": "profile"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 3
+            }
         },
         {
             "src": {
@@ -168,7 +191,9 @@
                 "process": "scheduler/content_is_smoke_free_4h9zo",
                 "port": "profile"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 3
+            }
         },
         {
             "src": {
@@ -179,7 +204,9 @@
                 "process": "scheduler/cotent_getblock_4y5i2",
                 "port": "content"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 7
+            }
         },
         {
             "src": {
@@ -190,7 +217,9 @@
                 "process": "scheduler/cotent_getblock_4y5i2",
                 "port": "content"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 7
+            }
         },
         {
             "src": {
@@ -201,7 +230,9 @@
                 "process": "scheduler/content_is_smoke_free_m2vgi",
                 "port": "profile"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 3
+            }
         },
         {
             "src": {
@@ -212,7 +243,9 @@
                 "process": "scheduler/cotent_getblock_4y5i2",
                 "port": "content"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 7
+            }
         },
         {
             "src": {
@@ -223,7 +256,48 @@
                 "process": "scheduler/profile_gender_3lczm",
                 "port": "profile"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 3
+            }
+        },
+        {
+            "src": {
+                "process": "scheduler/content_is_smoke_free_p0dws",
+                "port": "profile"
+            },
+            "tgt": {
+                "process": "scheduler/cotent_getblock_4y5i2",
+                "port": "profile"
+            },
+            "metadata": {
+                "route": 3
+            }
+        },
+        {
+            "src": {
+                "process": "scheduler/content_is_smoke_free_4h9zo",
+                "port": "profile"
+            },
+            "tgt": {
+                "process": "scheduler/cotent_getblock_4y5i2",
+                "port": "profile"
+            },
+            "metadata": {
+                "route": 3
+            }
+        },
+        {
+            "src": {
+                "process": "scheduler/content_is_smoke_free_m2vgi",
+                "port": "profile"
+            },
+            "tgt": {
+                "process": "scheduler/cotent_getblock_4y5i2",
+                "port": "profile"
+            },
+            "metadata": {
+                "route": 3
+            }
         }
     ]
 }
