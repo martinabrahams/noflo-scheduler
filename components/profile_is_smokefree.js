@@ -7,8 +7,9 @@ exports.getComponent = () => {
 
   c.inPorts.add('profile', {
     datatype: 'object',
-    description: 'User profile'
+    description: 'User profile object'
   });
+
   
   c.outPorts.add('yes', {
     datatype: 'object',

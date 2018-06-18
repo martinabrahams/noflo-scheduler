@@ -14,10 +14,10 @@
             "port": "profile",
             "metadata": {
                 "label": "Profile obj",
-                "x": 360,
-                "y": 180,
-                "width": 2,
-                "height": 2
+                "x": 20,
+                "y": 20,
+                "width": 72,
+                "height": 72
             }
         }
     },
