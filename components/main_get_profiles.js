@@ -11,7 +11,7 @@ exports.getComponent = () => {
   });
 
   c.outPorts.add('userprofiles', {
-    datatype: 'all',
+    datatype: 'array',
     description: 'User Profiles to process'
   });
 
@@ -59,12 +59,12 @@ exports.getComponent = () => {
     
     
     // Process data and send output
-    // temp - only send single profile
     output.send({
-      userprofiles: data[0]
+      userprofiles: data
     });
 
     console.log('sent data', data);
+
     // Deactivate
     output.done();
   });

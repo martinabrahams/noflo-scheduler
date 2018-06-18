@@ -31,5 +31,5 @@ wrappedGraph({
         throw err; 
     }
     // Do something with the results
-    console.log(result.out);
+    console.log('results', result.content);
 });
