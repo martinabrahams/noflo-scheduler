@@ -8,18 +8,7 @@
             "type": "all"
         }
     },
-    "inports": {
-        "in": {
-            "process": "scheduler/main_get_profiles_56oh6",
-            "port": "in",
-            "metadata": {
-                "x": 360,
-                "y": 324,
-                "width": 72,
-                "height": 72
-            }
-        }
-    },
+    "inports": {},
     "outports": {},
     "groups": [
         {
@@ -119,6 +108,13 @@
                 "port": "content"
             },
             "metadata": {}
+        },
+        {
+            "data": "true",
+            "tgt": {
+                "process": "scheduler/main_get_profiles_56oh6",
+                "port": "in"
+            }
         }
     ]
 }
