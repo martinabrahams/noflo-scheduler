@@ -55,7 +55,7 @@ exports.getComponent = () => {
     } else {
       // Process data and send output
       output.send({
-        unknown: profile
+        unknown: profile[0]
       });
     }   
 

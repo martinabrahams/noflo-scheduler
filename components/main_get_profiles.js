@@ -59,8 +59,9 @@ exports.getComponent = () => {
     
     
     // Process data and send output
+    // temp - only send single profile
     output.send({
-      userprofiles: data
+      userprofiles: data[0]
     });
 
     console.log('sent data', data);
