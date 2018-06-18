@@ -1,17 +1,22 @@
 const noflo = require('noflo');
 
 exports.getComponent = () => {
-    console.log('init main_get_profiles');
+  console.log('init main_get_profiles');
+
   const c = new noflo.Component();
   c.description = '';
+
   c.icon = 'hand-peace-o';
- c.inPorts.add('in', {
-   datatype: 'all',
-   description: 'Packet to forward'
- });
-  c.outPorts.add('user_profiles', {
-    datatype: 'array'
+    c.inPorts.add('in', {
+    datatype: 'all',
+    description: 'Packet to forward'
   });
+
+  c.outPorts.add('user_profiles', {
+    datatype: 'object',
+    description: 'User Profiles to process'
+  });
+
   c.process((input, output) => {
 
     console.log('processing main_get_profiles');
