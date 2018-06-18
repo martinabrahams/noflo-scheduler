@@ -23,16 +23,13 @@ exports.getComponent = () => {
 
   c.process((input, output) => {
 
-    console.log('init profile is smoke free');
-
     // Check preconditions on input data
     if (!input.hasData('profile')) {
       return;
     }
+
     // Read packets we need to process
     const profileData = input.getData('profile');
-
-    console.log('imported profile', profileData);
     
     if (profileData && profileData.is_smokefree) {
        // Process data and send output

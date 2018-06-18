@@ -16,16 +16,6 @@ exports.getComponent = () => {
   });
 
   c.process((input, output) => {
-
-    console.log('processing main_get_profiles');
-
-    // ignore input data
-    // Check preconditions on input data
-    // if (!input.hasData('in')) {
-    //  return;
-    // }
-    // Read packets we need to process
-    //const datain = input.getData('in');
     
     // mock profile data    
     const data = [{
@@ -62,8 +52,6 @@ exports.getComponent = () => {
     output.send({
       userprofiles: data
     });
-
-    console.log('sent data', data);
 
     // Deactivate
     output.done();

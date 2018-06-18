@@ -16,5 +16,7 @@ wrappedGraph({
         throw err; 
     }
     // Do something with the results
-    console.log('results', result.content);
+    //console.log('results', result.content);
+
+    console.log('complete', result);
 });

@@ -26,6 +26,7 @@ exports.getComponent = () => {
     if (!input.hasData('profile')) {
       return;
     }
+    
     // Read packets we need to process
     const profile = input.getData('profile');
 
@@ -55,7 +56,7 @@ exports.getComponent = () => {
     } else {
       // Process data and send output
       output.send({
-        unknown: profile[0]
+        unknown: profile
       });
     }   
 
