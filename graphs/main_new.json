@@ -13,14 +13,25 @@
             "process": "scheduler/main_get_profiles_80izt",
             "port": "in",
             "metadata": {
-                "x": 504,
+                "x": 468,
                 "y": 360,
                 "width": 72,
                 "height": 72
             }
         }
     },
-    "outports": {},
+    "outports": {
+        "content": {
+            "process": "scheduler/Determine_Content_7t52c",
+            "port": "content",
+            "metadata": {
+                "x": 1044,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
     "groups": [],
     "processes": {
         "scheduler/main_get_profiles_80izt": {
@@ -32,7 +43,29 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "scheduler/Determine_Content_7t52c": {
+            "component": "scheduler/Determine_Content",
+            "metadata": {
+                "label": "Determine_Content",
+                "x": 864,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
         }
     },
-    "connections": []
+    "connections": [
+        {
+            "src": {
+                "process": "scheduler/main_get_profiles_80izt",
+                "port": "userprofiles"
+            },
+            "tgt": {
+                "process": "scheduler/Determine_Content_7t52c",
+                "port": "profile"
+            },
+            "metadata": {}
+        }
+    ]
 }

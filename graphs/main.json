@@ -6,37 +6,25 @@
             "type": "noflo-nodejs"
         }
     },
-    "inports": {
-        "blah": {
-            "process": "a0658bdc-f834-4eb7-9670-7fe9c393a0fe/Main_Get_Contactable_Profiles_w77kn",
-            "port": "in",
-            "metadata": {
-                "label": "Blah",
-                "x": 576,
-                "y": 396,
-                "width": 72,
-                "height": 72
-            }
-        }
-    },
+    "inports": {},
     "outports": {},
     "groups": [],
     "processes": {
-        "a0658bdc-f834-4eb7-9670-7fe9c393a0fe/Main_Get_Contactable_Profiles_w77kn": {
-            "component": "scheduler/main_get_profiles",
+        "scheduler/determine_content_p8uxs": {
+            "component": "scheduler/determine_content",
             "metadata": {
-                "label": "Get Contactable Profiles",
-                "x": 756,
-                "y": 396,
+                "label": "determine_content",
+                "x": 1008,
+                "y": 468,
                 "width": 72,
                 "height": 72
             }
         },
-        "scheduler/Determine Content_rn787": {
-            "component": "scheduler/determine_content",
+        "scheduler/main_get_profiles_x0zs4": {
+            "component": "scheduler/main_get_profiles",
             "metadata": {
-                "label": "Determine User Content",
-                "x": 972,
+                "label": "main_get_profiles",
+                "x": 792,
                 "y": 396,
                 "width": 72,
                 "height": 72
