@@ -19,6 +19,9 @@ exports.getComponent = () => {
   });
 
   c.process((input, output) => {
+
+    console.log('init profile is smoke free');
+
     // Check preconditions on input data
     if (!input.hasData('profile')) {
       return;
