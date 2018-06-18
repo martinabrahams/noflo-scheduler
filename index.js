@@ -1,21 +1,6 @@
 const noflo = require('noflo');
 
-// var loader = new noflo.ComponentLoader(__dirname);
-
-// loader.load('main', function (instance) {
-//   // The instance is a running NoFlo subgraph with your graph definition
-//     console.log('loaded');
-//   // Create a socket and attach it to the exported port
-//   var filename = noflo.internalSocket.createSocket();
-//   instance.inPorts.blah.attach("blah"); //.attach(filename);
-
-//   filename.send('test');
-//   //filename.send(someFileToRead);
-//   filename.disconnect();
-// });
-
-
-//scheduler/main
+// scheduler/main
 var wrappedGraph = noflo.asCallback('scheduler/main_new', {
     // Provide the project base directory where NoFlo seeks graphs and components
     baseDir: './'
