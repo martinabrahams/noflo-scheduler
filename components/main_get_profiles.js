@@ -5,11 +5,11 @@ exports.getComponent = () => {
   const c = new noflo.Component();
   c.description = '';
   c.icon = 'hand-peace-o';
-//  c.inPorts.add('in', {
-//    datatype: 'all',
-//    description: 'Packet to forward'
-//  });
-  c.outPorts.add('userProfiles', {
+ c.inPorts.add('in', {
+   datatype: 'all',
+   description: 'Packet to forward'
+ });
+  c.outPorts.add('user_profiles', {
     datatype: 'array'
   });
   c.process((input, output) => {
@@ -17,11 +17,11 @@ exports.getComponent = () => {
     console.log('processing main_get_profiles');
 
     // Check preconditions on input data
-    //if (!input.hasData('in')) {
-    //  return;
-    //}
+    if (!input.hasData('in')) {
+     return;
+    }
     // Read packets we need to process
-    //const data = input.getData('in');
+    const datain = input.getData('in');
     
     // mock profile data    
     const data = [{
@@ -56,8 +56,10 @@ exports.getComponent = () => {
     
     // Process data and send output
     output.send({
-      userProfiles: data
+        user_profiles: data
     });
+
+    console.log('sent data', data);
     // Deactivate
     output.done();
   });

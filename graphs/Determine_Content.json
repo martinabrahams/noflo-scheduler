@@ -10,8 +10,17 @@
     },
     "inports": {
         "profile" : {
-            "datatype": "object",
-            "description": "Profile to run against",
+            "process": "scheduler/profile_is_smokefree_9hxd7",
+            "port": "profile",
+            "metadata": {
+                "label": "Profile obj",
+                "x": 648,
+                "y": 396,
+                "width": 2,
+                "height": 2
+            },
+            "datatype": "string",
+            "description": "User profile",
             "required": true
         }
     },

@@ -7,7 +7,16 @@
         }
     },
     "inports": {
-        "in" : {
+        "blah" : {
+            "process": "a0658bdc-f834-4eb7-9670-7fe9c393a0fe/Main_Get_Contactable_Profiles_w77kn",
+            "port": "in",
+            "metadata": {
+                "label": "Blah",
+                "x": 648,
+                "y": 396,
+                "width": 2,
+                "height": 2
+            },
             "datatype": "string",
             "description": "Bogus string content to kick it off",
             "required": true
