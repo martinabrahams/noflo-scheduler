@@ -9,7 +9,7 @@ var wrappedGraph = noflo.asCallback('scheduler/main', {
 // Call the wrapped graph. Can be done multiple times
 wrappedGraph({
     // Provide data to be sent to inports
-    in: 'blah'
+    in: true
 }, function(err, result) {
     // If component sent to its error port, then we'll have err
     if (err) { 
