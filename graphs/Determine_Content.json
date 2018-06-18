@@ -9,19 +9,16 @@
         }
     },
     "inports": {
-        "profile" : {
+        "profile": {
             "process": "scheduler/profile_is_smokefree_9hxd7",
             "port": "profile",
             "metadata": {
                 "label": "Profile obj",
-                "x": 648,
-                "y": 396,
+                "x": 360,
+                "y": 180,
                 "width": 2,
                 "height": 2
-            },
-            "datatype": "string",
-            "description": "User profile",
-            "required": true
+            }
         }
     },
     "outports": {},
@@ -31,8 +28,8 @@
             "component": "scheduler/profile_is_smokefree",
             "metadata": {
                 "label": "profile_is_smokefree",
-                "x": 334,
-                "y": 100,
+                "x": 540,
+                "y": 108,
                 "width": 72,
                 "height": 72
             }
@@ -41,8 +38,8 @@
             "component": "scheduler/profile_has_recent_sos",
             "metadata": {
                 "label": "profile_has_recent_sos",
-                "x": 576,
-                "y": 108,
+                "x": 756,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
@@ -51,8 +48,8 @@
             "component": "scheduler/profile_gender",
             "metadata": {
                 "label": "profile_gender",
-                "x": 792,
-                "y": 216,
+                "x": 972,
+                "y": 288,
                 "width": 72,
                 "height": 72
             }
@@ -77,8 +74,7 @@
             "tgt": {
                 "process": "scheduler/profile_has_recent_sos_1fgk8",
                 "port": "profile"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -88,8 +84,7 @@
             "tgt": {
                 "process": "scheduler/content_is_smoke_free_p0dws",
                 "port": "profile"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -99,8 +94,7 @@
             "tgt": {
                 "process": "scheduler/profile_gender_3lczm",
                 "port": "profile"
-            },
-            "metadata": {}
+            }
         }
     ]
 }
