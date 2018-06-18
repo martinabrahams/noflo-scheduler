@@ -1,8 +1,6 @@
 const noflo = require('noflo');
 
 exports.getComponent = () => {
-  console.log('init main_get_profiles');
-
   const c = new noflo.Component();
   c.description = '';
 
@@ -21,12 +19,13 @@ exports.getComponent = () => {
 
     console.log('processing main_get_profiles');
 
+    // ignore input data
     // Check preconditions on input data
-    if (!input.hasData('in')) {
-     return;
-    }
+    // if (!input.hasData('in')) {
+    //  return;
+    // }
     // Read packets we need to process
-    const datain = input.getData('in');
+    //const datain = input.getData('in');
     
     // mock profile data    
     const data = [{
@@ -61,7 +60,7 @@ exports.getComponent = () => {
     
     // Process data and send output
     output.send({
-      userprofiles: data
+      userprofiles: 'fdgdfgdfgdfgdfgd'
     });
 
     console.log('sent data', data);
