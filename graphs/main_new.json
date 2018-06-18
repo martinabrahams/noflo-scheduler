@@ -1,0 +1,38 @@
+{
+    "caseSensitive": false,
+    "properties": {
+        "name": "main_new",
+        "description": "Main entry point",
+        "icon": "bed",
+        "environment": {
+            "type": "all"
+        }
+    },
+    "inports": {
+        "in": {
+            "process": "scheduler/main_get_profiles_80izt",
+            "port": "in",
+            "metadata": {
+                "x": 504,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "scheduler/main_get_profiles_80izt": {
+            "component": "scheduler/main_get_profiles",
+            "metadata": {
+                "label": "main_get_profiles",
+                "x": 648,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": []
+}
