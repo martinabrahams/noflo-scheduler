@@ -60,7 +60,7 @@ exports.getComponent = () => {
     
     // Process data and send output
     output.send({
-      userprofiles: 'fdgdfgdfgdfgdfgd'
+      userprofiles: data
     });
 
     console.log('sent data', data);

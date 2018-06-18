@@ -27,35 +27,35 @@ exports.getComponent = () => {
       return;
     }
     // Read packets we need to process
-    const data = input.getData('profile');
+    const profile = input.getData('profile');
 
     if (profile && profile.gender) {
       switch(profile.gender) {
         case 'male':
           output.send({
-            male: data
+            male: profile
           });
           break;
         case 'female':
           output.send({
-            female: data
+            female: profile
           });
           break;
         case 'other':
           output.send({
-            other: data
+            other: profile
           });
           break;
         default:
           output.send({
-            unknown: data
+            unknown: profile
           });
           break;
       }
     } else {
       // Process data and send output
       output.send({
-        unknown: data
+        unknown: profile
       });
     }   
 
