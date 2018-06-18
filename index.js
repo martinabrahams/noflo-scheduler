@@ -1,7 +1,7 @@
 const noflo = require('noflo');
 
 // scheduler/main
-var wrappedGraph = noflo.asCallback('scheduler/main_new', {
+var wrappedGraph = noflo.asCallback('scheduler/main', {
     // Provide the project base directory where NoFlo seeks graphs and components
     baseDir: './'
 });
