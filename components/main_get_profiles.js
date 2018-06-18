@@ -7,13 +7,13 @@ exports.getComponent = () => {
   c.description = '';
 
   c.icon = 'hand-peace-o';
-    c.inPorts.add('in', {
+  c.inPorts.add('in', {
     datatype: 'all',
     description: 'Packet to forward'
   });
 
-  c.outPorts.add('user_profiles', {
-    datatype: 'object',
+  c.outPorts.add('userprofiles', {
+    datatype: 'all',
     description: 'User Profiles to process'
   });
 
@@ -61,7 +61,7 @@ exports.getComponent = () => {
     
     // Process data and send output
     output.send({
-        user_profiles: data
+      userprofiles: data
     });
 
     console.log('sent data', data);
