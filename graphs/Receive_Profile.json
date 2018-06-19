@@ -1,0 +1,49 @@
+{
+    "caseSensitive": false,
+    "properties": {
+        "name": "Receive Profile",
+        "description": "Receive ChatFuel Profile Update",
+        "icon": "user-plus",
+        "environment": {
+            "type": "all"
+        }
+    },
+    "inports": {
+        "chatfuel_profile": {
+            "process": "scheduler/api_update_profile_8od71",
+            "port": "chatfuel_profile",
+            "metadata": {
+                "x": 540,
+                "y": 504,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "outports": {
+        "result": {
+            "process": "scheduler/api_update_profile_8od71",
+            "port": "result",
+            "metadata": {
+                "x": 1080,
+                "y": 504,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "groups": [],
+    "processes": {
+        "scheduler/api_update_profile_8od71": {
+            "component": "scheduler/api_update_profile",
+            "metadata": {
+                "label": "api_update_profile",
+                "x": 792,
+                "y": 504,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": []
+}
