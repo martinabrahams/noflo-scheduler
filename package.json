@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node node_modules/.bin/noflo-nodejs --graph graphs/main.json --trace"
+    "test": "mocha tests/unit/",
+    "start": "node node_modules/.bin/noflo-nodejs --graph graphs/main.json --trace",
+    "invoke": "sam local invoke chatBotFunction -e ./tests/events/helloWorld.json"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +16,9 @@
     "noflo-filesystem": "^2.0.1",
     "noflo-nodejs": "^0.10.1",
     "noflo-objects": "^0.5.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1"
   }
 }
