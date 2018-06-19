@@ -2,7 +2,7 @@ const noflo = require('noflo');
 const qs = require('querystring');
 
 // scheduler/main
-var wrappedGraph = noflo.asCallback('scheduler/main', {
+var wrappedGraph = noflo.asCallback('scheduler/receive_profile', {
     // Provide the project base directory where NoFlo seeks graphs and components
     baseDir: './'
 });
@@ -26,15 +26,13 @@ exports.handler = (event, context, callback) => {
     }
     
     
+    // Parse chatfuel profile from form encoded POST body
+    var bodyProfile = qs.parse(event.body);
     
-    var bodyContent = qs.parse(event.body);
-    
-    console.log('parsed body content', bodyContent);
-
     // Call the wrapped graph. Can be done multiple times
     wrappedGraph({
-        // Provide data to be sent to inports
-        in: true
+        // Pass profile into graph
+        chatfuel_profile: bodyProfile
     }, function(err, result) {
         // If component sent to its error port, then we'll have err
         if (err) { 
@@ -43,20 +41,22 @@ exports.handler = (event, context, callback) => {
         // Do something with the results
         //console.log('results', result.content);
     
-        console.log('complete', result);
+        //console.log('complete', result);
         
-        var responseBody = {
-            "key3": "value3",
-            "key2": "value2",
-            "key1": "value1"
-        };
+        // var responseBody = {
+        //     "key3": "value3",
+        //     "key2": "value2",
+        //     "key1": "value1"
+        // };
+
+        // todo: confirm result from noflo is success before passing on success
 
         var response = {
             "statusCode": 200,
             "headers": {
                 "my_header": "my_value"
             },
-            "body": JSON.stringify(responseBody),
+            "body": JSON.stringify(result),
             "isBase64Encoded": false
         };
         callback(null, response);

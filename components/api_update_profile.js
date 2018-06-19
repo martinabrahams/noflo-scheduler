@@ -19,8 +19,6 @@ exports.getComponent = () => {
   
   c.process((input, output) => {
 
-    console.log('init api_update_profile');
-
     // Check preconditions on input data    
     if (!input.hasData('chatfuel_profile')) {
       return;
@@ -28,10 +26,11 @@ exports.getComponent = () => {
     
     var profile = input.getData('chatfuel_profile');
     
+
+    console.log('NOFLO received profile', profile);
+
     // todo: push to database
     
-    // Read packets we need to process
-    //const content = input.getData('content');
 
     var fakeResult = { success: true };
     

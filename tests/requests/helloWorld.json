@@ -1,12 +1,12 @@
 {
-    "body": "{ \"test\": \"body\"}",
-    "httpMethod": "GET",
+    "body": "fin+pack+cost=30&fin+pack+size=25&fin+per+day=30&focus_smoke_per_day=20&focus_motivation=Finances&focus_last_sos_action=Craving&focus_motivation_level=Very&motivation+reason=Finances&focus_goal=Holiday&chatfuel+user+id=1232658876758984&gender=male&last+name=Abrahams&last+clicked+button+name=Get+Started&first+name=Marty&profile+pic+url=https%3A%2F%2Fscontent.xx.fbcdn.net%2Fv%2Ft1.0-1%2F18268229_10211318811624254_2567594560062210092_n.jpg%3Foh%3D4a5c390d1361428d4de774f6ad84f4ad%26oe%3D5B462F3C&messenger+user+id=1232658876758984&last+visited+block+id=5aaa0155e4b02de325ad9646&last+visited+block+name=Welcome+message&locale=en_US&source=Direct+m.me+%2B+other&timezone=11&last+user+freeform+input=Basketball&longitude=151.20755&city=Sydney&map+url=https%3A%2F%2Fl.facebook.com%2Fl.php%3Fu%3Dhttps%253A%252F%252Fwww.bing.com%252Fmaps%252Fdefault.aspx%253Fv%253D2%2526pc%253DFACEBK%2526mid%253D8100%2526where1%253D-33.8328611559%25252C%252B151.20754250512%2526FORM%253DFBKPL1%2526mkt%253Den-US%26h%3DATO5G0XlQtRreMNqHnAWFPfNYJmHgw8wUOwt4O_aG0CbHlbdLbg501e9WaY6tjJVgsIgg7r2Ww9PrWFmZAHenEx32YCihy7f0guOh_6n_uPqRUeOwqJw%26s%3D1&address=Jingogae+Korean%2C+Ridge+Street%2C+Victoria+Cross%2C+North+Sydney%2C+Lower+North+Shore%2C+Sydney%2C+North+Sydney+Council%2C+New+South+Wales%2C+2060%2C+Australia&country=Australia&latitude=-33.832863&zip=2060&state=New+South+Wales",
+    "httpMethod": "POST",
     "resource": "/{proxy+}",
     "queryStringParameters": {
         "foo": "bar"
     },
     "requestContext": {
-        "httpMethod": "GET",
+        "httpMethod": "POST",
         "requestId": "c6af9ac6-7b61-11e6-9a41-93e8deadbeef",
         "path": "/{proxy+}",
         "extendedRequestId": null,
