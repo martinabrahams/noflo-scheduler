@@ -1,7 +1,5 @@
 const noflo = require('noflo');
-
-console.log('init');
-
+const qs = require('querystring');
 
 // scheduler/main
 var wrappedGraph = noflo.asCallback('scheduler/main', {
@@ -10,9 +8,28 @@ var wrappedGraph = noflo.asCallback('scheduler/main', {
 });
 
 
-
-
 exports.handler = (event, context, callback) => {
+
+    //console.log('event', event);
+    //console.log('context', context);
+    
+    
+    if (!event || !event.body) {
+          const response = {
+            statusCode: 403,
+            body: JSON.stringify({
+              message: `Invalid payload`
+            }),
+          };
+
+        callback(null, response);
+    }
+    
+    
+    
+    var bodyContent = qs.parse(event.body);
+    
+    console.log('parsed body content', bodyContent);
 
     // Call the wrapped graph. Can be done multiple times
     wrappedGraph({
