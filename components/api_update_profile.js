@@ -28,6 +28,10 @@ exports.getComponent = () => {
     if (!input.hasData('chatfuel_profile')) {
       return;
     }
+
+    if (!input.hasData('profile_service')) {
+      return;
+    }
     
     var profile = input.getData('chatfuel_profile');
     var profileService = input.getData('profile_service');

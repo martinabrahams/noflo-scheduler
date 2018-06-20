@@ -1,7 +1,6 @@
 const noflo = require('noflo');
 const qs = require('querystring');
-var AWS = require('aws-sdk');
-
+const AWS = require('aws-sdk');
 const profileService = require('./services/userProfileService').UserProfileService;
 
 // scheduler/main
