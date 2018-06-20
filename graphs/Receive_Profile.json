@@ -9,6 +9,16 @@
         }
     },
     "inports": {
+        "profile_service": {
+            "process": "scheduler/api_update_profile_8od71",
+            "port": "profile_service",
+            "metadata": {
+                "x": 740,
+                "y": 704,
+                "width": 72,
+                "height": 72
+            }
+        },
         "chatfuel_profile": {
             "process": "scheduler/api_update_profile_8od71",
             "port": "chatfuel_profile",

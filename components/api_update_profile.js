@@ -10,6 +10,11 @@ exports.getComponent = () => {
     description: 'ChatFuel user profile'
   });
 
+  c.inPorts.add('profile_service', {
+    datatype: 'object',
+    description: 'Service object'
+  });
+
   
   c.outPorts.add('result', {
     datatype: 'object',
@@ -25,14 +30,17 @@ exports.getComponent = () => {
     }
     
     var profile = input.getData('chatfuel_profile');
-    
+    var profileService = input.getData('profile_service');
+
+    // todo: validate input objects
 
     console.log('NOFLO received profile', profile);
 
     // todo: push to database
+    var res = profileService.updateProfile(profile);
     
 
-    var fakeResult = { success: true };
+    var fakeResult = { success: true, result: res };
     
     // Process data and send output
     output.send({
